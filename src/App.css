@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/skyscraper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.floors {
+  height: 60px;
+  width: 860px;
+  position: relative;
+  top: 195px;
+}
+
+.floor {
+  background-color: white;
+  opacity: 0.1;
+  height: 30px;
+  width: 830px;
+  position: relative;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+.floor:hover {
+  opacity: 0.5;
+  transform: 3s;
+  cursor: pointer;
+}
+
+.floor-1 {
+  position: relative;
+  top: 5px;
+}
+
+
+
+
+
+
+.hiden-info {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  height: 100%;
+  width: 80%;
+  padding: 30px;
+
+  background: white;
+  border-radius: 10px;
+}
+
+.floor-main {
+  background-image: url(./assets/maket.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.button-exit {
+  display: flex;
+  margin-left: auto;
+  bottom: 19px;
+  position: relative;
+  border: none;
+  background-color: rgb(117, 0, 0);
+  color: white;
+  border-radius: 10%;
+  width: 80px;
+  padding:0 15px;
+}
+
+.floor-title {
+  position: relative;
+  left: 50%;
+}
