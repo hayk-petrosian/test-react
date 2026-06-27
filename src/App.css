@@ -75,7 +75,7 @@ body {
 .floor-main {
   position: relative;
   width: 90vw;
-  max-width: 1015px;
+  max-width: 815px;
   aspect-ratio: 1015 / 555;
   background-image: url("./assets/maket.jpg");
   background-size: 100% 100%;
