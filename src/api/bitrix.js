@@ -20,16 +20,6 @@ export async function getDeals() {
     return data.result;
 }
 
-export async function getDealFields() {
-    const response = await fetch(
-        `${WEBHOOK}/crm.deal.fields.json`
-    );
-
-    const data = await response.json();
-
-    return data.result;
-}
-
 export async function reserveApartment(dealId) {
     const response = await fetch(
         `${WEBHOOK}/crm.deal.update.json`,

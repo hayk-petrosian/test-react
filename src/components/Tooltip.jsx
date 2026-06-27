@@ -16,18 +16,6 @@ function Tooltip({ apartment, closeTooltip, reloadApartments }) {
         }
     };
 
-    const handleCreateDeal = async () => {
-        try {
-            const data = await createDeal(apartment);
-
-            if (data.result) {
-                alert("Заявка отправлена");
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
     return (
         <div className="tooltip">
             <h3>Квартира №{apartment.id}</h3>
