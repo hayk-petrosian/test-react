@@ -1,16 +1,14 @@
-import { reserveApartment } from '../api/bitrix';
+import { reserveApartment, createDeal } from "../api/bitrix";
 
 function Tooltip({ apartment, closeTooltip, reloadApartments }) {
     if (!apartment) return null;
 
     const handleReserveApartment = async () => {
         try {
-            console.log(apartment);
-            console.log('dealId:', apartment.dealId);
             const data = await reserveApartment(apartment.dealId);
 
             if (data.result) {
-                alert('Квартира успешно забронирована!');
+                alert("Квартира успешно забронирована!");
                 await reloadApartments();
             }
         } catch (error) {
@@ -18,29 +16,50 @@ function Tooltip({ apartment, closeTooltip, reloadApartments }) {
         }
     };
 
-    console.log(JSON.stringify(apartment, null, 2));
+    const handleCreateDeal = async () => {
+        try {
+            const data = await createDeal(apartment);
+
+            if (data.result) {
+                alert("Заявка отправлена");
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <div className="tooltip">
             <h3>Квартира №{apartment.id}</h3>
 
             <p>
                 Статус:
-                {apartment.status === 'free' && 'Свободна'}
-                {apartment.status === 'reserved' && 'Забронирована'}
-                {apartment.status === 'rented' && 'Арендована'}
+                {apartment.status === "free" && "Свободна"}
+                {apartment.status === "reserved" && "Забронирована"}
+                {apartment.status === "rented" && "Продана"}
             </p>
+
             <p>Комнат: {apartment.rooms}</p>
             <p>Площадь: {apartment.area}</p>
             <p>Этаж: {apartment.floor}</p>
-            <p>Стоимость {apartment.price}</p>
-            <button className="tooltip-close" onClick={closeTooltip}>
+            <p>Стоимость: {apartment.price} ₽</p>
+
+            <button
+                className="tooltip-close"
+                onClick={closeTooltip}
+            >
                 Закрыть
             </button>
 
-            {apartment.status === 'free' && (
-                <button className="rent-btn" onClick={handleReserveApartment}>
-                    Арендовать
-                </button>
+            {apartment.status === "free" && (
+                <>
+                    <button
+                        className="rent-btn"
+                        onClick={handleReserveApartment}
+                    >
+                        Забронировать
+                    </button>
+                </>
             )}
         </div>
     );

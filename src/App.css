@@ -28,14 +28,14 @@ body {
   width: 1300px;
   position: relative;
   bottom: 200px;
-  left: 190px;
+  left: 215px;
 }
 
 .floor {
-  background-color: transparent;
+  background-color: white;
   opacity: 0.1;
   height: 30px;
-  width: 900px;
+  width: 820px;
   position: relative;
   transition: opacity 0.5s ease, transform 0.5s ease;
   cursor: pointer;
@@ -43,7 +43,6 @@ body {
 }
 
 .floor:hover {
-  background-color: white;
   opacity: 0.5;
   transform: 3s;
   cursor: pointer;
@@ -51,7 +50,6 @@ body {
 
 .floor-1 {
   position: relative;
-  top: 10px;
 }
 
 .hiden-info {
@@ -66,37 +64,24 @@ body {
 }
 
 .modal {
-    position: relative;
-
-    width: min(95vw, 1200px);
-    height: min(95vh, 900px);
-
-    background: white;
-    border-radius: 15px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    overflow: auto;
-
-    padding: 20px;
+  height: 100%;
+  width: 70%;
+  padding: 30px;
+  position: relative;
+  background: white;
+  border-radius: 10px;
 }
 
 .floor-main {
   position: relative;
-
-  width: 100%;
+  width: 90vw;
   max-width: 1015px;
-
   aspect-ratio: 1015 / 555;
-
-  margin: 0 auto;
-
   background-image: url("./assets/maket.jpg");
-  background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .button-exit {
@@ -121,14 +106,15 @@ body {
 
 .floor-title {
   position: relative;
+  left: 50%;
 }
 
 .apartaments {
   /* background-color: black; */
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 1015px;
+  height: 555px;
   top: 65px;
   /* opacity: 0.2; */
   text-align: center;
@@ -144,6 +130,21 @@ body {
   opacity: 0.7;
   transition: opacity 0.3s ease;
   cursor: pointer;
+}
+
+.apartament {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.show-status .apartament.free {
+  background: green;
+  opacity: 0.5;
+}
+
+.show-status .apartament.reserved {
+  background: red;
+  opacity: 0.5;
 }
 
 
@@ -195,23 +196,6 @@ body {
   background-color: orange;
 }
 
-еперь CSS .apartament {
-  background: transparent;
-  transition: background-color .3s;
-}
-
-.apartament.free {
-  background: rgba(0, 255, 0, .4);
-}
-
-.apartament.reserved {
-  background: rgba(255, 165, 0, .4);
-}
-
-.apartament.rented {
-  background: rgba(255, 0, 0, .4);
-}
-
 .tooltip {
   position: absolute;
   top: 80px;
@@ -250,11 +234,203 @@ body {
 .rent-btn {
   background-color: greenyellow;
   border: none;
-  margin-left: 60px;
+  margin-left: 40px;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .rent-btn:hover {
   background-color: green;
   cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+
+  .modal {
+    width: 85%;
+  }
+
+  .apartament-1 {
+    left: 39%;
+    top: 39%;
+    width: 4%;
+    height: 20%;
+  }
+
+  .apartament-2 {
+    left: 51%;
+    top: 39%;
+    width: 4%;
+    height: 23%;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1125px) {
+  .modal {
+    width: 95%;
+  }
+
+  .tooltip {
+    width: 220px;
+  }
+
+  .apartament-1 {
+    left: 35%;
+    top: 34%;
+    width: 4%;
+    height: 19%;
+  }
+
+  .apartament-2 {
+    left: 46%;
+    top: 34%;
+    width: 3%;
+    height: 22%;
+  }
+
+  .apartament-3 {
+    left: 52.5%;
+    top: 35%;
+    width: 3.5%;
+    height: 19%;
+  }
+
+  .apartament-4 {
+    left: 56.5%;
+    top: 35%;
+    width: 3.5%;
+    height: 16%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .modal {
+    width: 95%;
+  }
+
+  .tooltip {
+    width: 220px;
+  }
+
+  .apartament-1 {
+    left: 35%;
+    top: 34%;
+    width: 4%;
+    height: 19%;
+  }
+
+  .apartament-2 {
+    left: 46%;
+    top: 34%;
+    width: 3%;
+    height: 22%;
+  }
+
+  .apartament-3 {
+    left: 52.5%;
+    top: 35%;
+    width: 3.5%;
+    height: 19%;
+  }
+
+  .apartament-4 {
+    left: 56.5%;
+    top: 35%;
+    width: 3.5%;
+    height: 16%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .tooltip {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    right: auto;
+  }
+
+  .apartament-1 {
+    left: 31.5%;
+    top: 29%;
+    width: 2.5%;
+    height: 16%;
+  }
+
+  .apartament-2 {
+    left: 40.5%;
+    top: 29%;
+    width: 3%;
+    height: 18%;
+  }
+
+  .apartament-3 {
+    left: 46.5%;
+    top: 29%;
+    width: 2.5%;
+    height: 16%;
+  }
+
+  .apartament-4 {
+    left: 49.5%;
+    top: 29%;
+    width: 2.5%;
+    height: 13%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .tooltip {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    right: auto;
+  }
+
+  .apartament-1 {
+    left: 27%;
+    top: 23%;
+    width: 2%;
+    height: 15%;
+  }
+
+  .apartament-2 {
+    left: 34%;
+    top: 23%;
+    width: 3%;
+    height: 16%;
+  }
+
+  .apartament-3 {
+    left: 39.5%;
+    top: 23%;
+    width: 2.5%;
+    height: 14%;
+  }
+
+  .apartament-4 {
+    left: 42.5%;
+    top: 23%;
+    width: 2.5%;
+    height: 12%;
+  }
+
 }
