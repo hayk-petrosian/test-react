@@ -9,43 +9,123 @@ body {
 }
 
 .main {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-image: url("./assets/skyscraper.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
+.building {
+  position: relative;
+  width: min(100vw, calc(100vh * 2.62));
+  aspect-ratio: 1080/1920;
+}
+
+.building-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
 .floors {
-  position: relative;
-  height: 60px;
-  width: 1300px;
-  position: relative;
-  bottom: 200px;
-  left: 215px;
+  position: absolute;
+  inset: 0;
+  width: 29.5%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7%;
+  inset: 0;
+  left: 34%;
+  top: 21%;
 }
 
 .floor {
-  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 4.5%;
+  background: white;
   opacity: 0.1;
-  height: 30px;
-  width: 820px;
+  transition: .3s;
+  left: 0;
+}
+
+.floor-1 {
   position: relative;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  cursor: pointer;
-  margin-top: 10px;
+  top: 15%;
+}
+
+.floor-2 {
+  position: relative;
+  top: 13%;
+}
+
+.floor-3 {
+  position: relative;
+  top: 12%;
+}
+
+.floor-4 {
+  position: relative;
+  top: 11%;
+}
+
+.floor-5 {
+  position: relative;
+  top: 10%;
+}
+
+.floor-6 {
+  position: relative;
+  top: 9%;
+}
+
+.floor-7 {
+  position: relative;
+  top: 9%;
+}
+
+.floor-8 {
+  position: relative;
+  top: 8.5%;
+}
+
+.floor-9 {
+  position: relative;
+  top: 8%;
+}
+
+.floor-10 {
+  position: relative;
+  top: 7.0%;
+}
+
+.floor-11 {
+  position: relative;
+  top: 6%;
+}
+
+.floor-12 {
+  position: relative;
+  top: 6%;
+}
+
+.floor-13 {
+  position: relative;
+  top: 5.5%;
+}
+
+.floor-14 {
+  position: relative;
+  top: 5%;
 }
 
 .floor:hover {
   opacity: 0.5;
   transform: 3s;
   cursor: pointer;
+  background-color: white;
 }
 
 .floor-1 {
@@ -78,7 +158,7 @@ body {
   max-width: 815px;
   aspect-ratio: 1015 / 555;
   background-image: url("./assets/maket.jpg");
-  background-size: 100% 100%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -242,29 +322,29 @@ body {
 
 @media (min-width: 1401px) {
   .apartament-1 {
-    left: 36%;
+    left: 35%;
     top: 51%;
-    width: 5%;
-    height: 20%;
+    width: 4.5%;
+    height: 16%;
   }
 
   .apartament-2 {
-    left: 51%;
+    left: 50%;
     top: 51%;
     width: 5%;
     height: 23%;
   }
 
   .apartament-3 {
-    left: 60%;
+    left: 58%;
     top: 51%;
-    width: 5.5%;
+    width: 4%;
     height: 20%;
     background-color: transparent;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 62%;
     top: 51%;
     width: 4%;
     height: 18%;
@@ -278,30 +358,36 @@ body {
     width: 85%;
   }
 
+  /* .floors {
+    height: 78%;
+    top: 25%;
+    width: 385px;
+  } */
+
   .apartament-1 {
-    left: 36%;
+    left: 35.5%;
     top: 51%;
-    width: 5%;
-    height: 20%;
+    width: 4%;
+    height: 19%;
   }
 
   .apartament-2 {
-    left: 51%;
+    left: 50.5%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 23%;
   }
 
   .apartament-3 {
-    left: 60%;
+    left: 58%;
     top: 51%;
-    width: 5.5%;
+    width: 4%;
     height: 20%;
     background-color: transparent;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 62%;
     top: 51%;
     width: 4%;
     height: 18%;
@@ -320,33 +406,39 @@ body {
     width: 220px;
   }
 
+  /* .floors {
+    height: 78%;
+    top: 25%;
+  } */
+
   .apartament-1 {
-    left: 36%;
+    left: 35.5%;
     top: 51%;
-    width: 5%;
-    height: 20%;
+    width: 4%;
+    height: 18%;
   }
 
   .apartament-2 {
-    left: 51%;
+    left: 50.5%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 23%;
   }
 
   .apartament-3 {
-    left: 60.5%;
+    left: 58%;
     top: 51%;
-    width: 4.5%;
+    width: 4%;
     height: 20%;
   }
 
   .apartament-4 {
-    left: 65.5%;
+    left: 62.3%;
     top: 51%;
-    width: 4.5%;
+    width: 3.5%;
     height: 19%;
   }
+
 
 }
 
@@ -367,31 +459,31 @@ body {
   }
 
   .apartament-1 {
-    left: 36%;
+    left: 35.5%;
     top: 51%;
-    width: 5%;
-    height: 21%;
+    width: 4%;
+    height: 17%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 23%;
   }
 
   .apartament-3 {
-    left: 60.5%;
+    left: 58%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 21%;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 62%;
     top: 51%;
-    width: 4.5%;
-    height: 19%;
+    width: 4%;
+    height: 16%;
   }
 }
 
@@ -412,29 +504,30 @@ body {
     right: auto;
   }
 
+
   .apartament-1 {
-    left: 36%;
+    left: 35.5%;
     top: 51%;
-    width: 5%;
-    height: 21%;
+    width: 4%;
+    height: 17%;
   }
 
   .apartament-2 {
-    left: 51%;
+    left: 50.5%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 23%;
   }
 
   .apartament-3 {
-    left: 60.5%;
+    left: 58%;
     top: 51%;
-    width: 5%;
+    width: 4%;
     height: 20%;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 62%;
     top: 51%;
     width: 4%;
     height: 16%;

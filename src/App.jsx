@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Modal from './components/modal';
 import { getDeals } from './api/bitrix';
+import skyscraper from './assets/skyscraper.jpg';
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,30 +34,34 @@ function App() {
     return (
         <>
             <div className="main">
-                <div className="floors">
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
-                    <div className="floor"></div>
+                <div className="building">
+                    <img src={skyscraper} alt="" className="building-image" />
 
-                    <div
-                        className="floor floor-2"
-                        onClick={() => setIsOpen(true)}
-                    ></div>
+                    <div className="floors">
+                        <div className="floor floor-14"></div>
+                        <div className="floor floor-13"></div>
+                        <div className="floor floor-12"></div>
+                        <div className="floor floor-11"></div>
+                        <div className="floor floor-10"></div>
+                        <div className="floor floor-9"></div>
+                        <div className="floor floor-8"></div>
+                        <div className="floor floor-7"></div>
+                        <div className="floor floor-6"></div>
+                        <div className="floor floor-5"></div>
 
-                    <div
-                        className="floor floor-1"
-                        onClick={() => setIsOpen(true)}
-                    ></div>
+                        <div
+                            className="floor floor-4"
+                            onClick={() => setIsOpen(true)}
+                        ></div>
 
-                    <div className="floor"></div>
-                    <div className="floor"></div>
+                        <div
+                            className="floor floor-3"
+                            onClick={() => setIsOpen(true)}
+                        ></div>
+
+                        <div className="floor floor-2"></div>
+                        <div className="floor floor-1"></div>
+                    </div>
                 </div>
             </div>
 
