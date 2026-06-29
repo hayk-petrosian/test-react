@@ -41,6 +41,9 @@ export async function reserveApartment(dealId) {
 }
 
 export async function createDeal(apartment) {
+    console.log("Apartment:", apartment);
+    console.log("Price:", apartment.price);
+    console.log("Type:", typeof apartment.price);
     const dealResponse = await fetch(
         `${WEBHOOK}/crm.deal.add.json`,
         {
@@ -53,7 +56,6 @@ export async function createDeal(apartment) {
                     TITLE: `Заявка на квартиру №${apartment.id}`,
                     CURRENCY_ID: "RUB",
                     OPPORTUNITY: Number(apartment.price),
-
                     UF_CRM_1782385645823: apartment.id,
                     UF_CRM_1782385754259: apartment.area,
                     UF_CRM_1782385781764: apartment.price,
@@ -64,6 +66,7 @@ export async function createDeal(apartment) {
         }
     );
 
+
     const dealData = await dealResponse.json();
 
     if (!dealData.result) {
@@ -72,7 +75,7 @@ export async function createDeal(apartment) {
 
     const dealId = dealData.result;
 
-    await fetch(
+    const productResponse = await fetch(
         `${WEBHOOK}/crm.deal.productrows.set.json`,
         {
             method: "POST",
@@ -91,6 +94,11 @@ export async function createDeal(apartment) {
             }),
         }
     );
+
+    const productData = await productResponse.json();
+
+    console.log(productData);
+
 
     return dealData;
 }

@@ -15,7 +15,7 @@ function Tooltip({ apartment, closeTooltip, reloadApartments }) {
             console.error(error);
         }
     };
-
+        
     return (
         <div className="tooltip">
             <h3>Квартира №{apartment.id}</h3>

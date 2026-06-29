@@ -22,7 +22,6 @@ function App() {
         }));
 
         deals.forEach((deal) => {
-            console.log(deal.ID, deal.STAGE_ID);
         });
         setApartments(apartmentsFromBitrix);
     }
