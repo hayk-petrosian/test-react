@@ -169,13 +169,13 @@ body {
 
 .floor-main {
   position: relative;
-  width: 90vw;
-  max-width: 815px;
-  aspect-ratio: 748 / 531;
+  width: 95%;
+  max-width: 1400px;
+  height: calc(100vh - 60px);
   background-image: url("./assets/maket.jpg");
-  background-size: contain;
-  background-position: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position: center;
   margin: 0 auto;
   height: 100%;
 }
@@ -341,29 +341,29 @@ body {
     left: 36%;
     top: 51%;
     width: 4.5%;
-    height: 17%;
+    height: 20%;
   }
 
   .apartament-2 {
     left: 51%;
     top: 51%;
-    width: 5%;
-    height: 19%;
+    width: 4.5%;
+    height: 22%;
   }
 
   .apartament-3 {
     left: 61%;
     top: 51%;
     width: 4%;
-    height: 17%;
+    height: 20%;
     background-color: transparent;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 65.5%;
     top: 51%;
-    width: 4%;
-    height: 13%;
+    width: 5%;
+    height: 16%;
     background-color: transparent;
   }
 }
@@ -384,29 +384,29 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 17%;
+    height: 21%;
   }
 
   .apartament-2 {
-    left: 51%;
+    left: 50.5%;
     top: 51%;
     width: 5%;
-    height: 19%;
+    height: 23%;
   }
 
   .apartament-3 {
     left: 60.5%;
     top: 51%;
-    width: 5%;
-    height: 18%;
+    width: 4.5%;
+    height: 21%;
     background-color: transparent;
   }
 
   .apartament-4 {
-    left: 66%;
+    left: 65.5%;
     top: 51%;
     width: 4%;
-    height: 13%;
+    height: 16%;
     background-color: transparent;
   }
 
@@ -431,28 +431,28 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 17%;
+    height: 21%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5%;
-    height: 19%;
+    height: 23%;
   }
 
   .apartament-3 {
     left: 60.2%;
     top: 51%;
     width: 5%;
-    height: 17%;
+    height: 21%;
   }
 
   .apartament-4 {
     left: 65.3%;
     top: 51%;
     width: 5%;
-    height: 13%;
+    height: 16%;
   }
 
 
@@ -478,28 +478,28 @@ body {
     left: 35.5%;
     top: 51%;
     width: 5%;
-    height: 15%;
+    height: 20%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5%;
-    height: 17%;
+    height: 23%;
   }
 
   .apartament-3 {
     left: 60.5%;
     top: 51%;
     width: 5%;
-    height: 15%;
+    height: 20%;
   }
 
   .apartament-4 {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 11.5%;
+    height: 16%;
   }
 }
 
@@ -525,28 +525,28 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 14%;
+    height: 20%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5% 33.975px;
-    height: 16%;
+    height: 23%;
   }
 
   .apartament-3 {
     left: 61%;
     top: 51%;
     width: 4%;
-    height: 14%;
+    height: 21%;
   }
 
   .apartament-4 {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 11%;
+    height: 16%;
   }
 
 }
