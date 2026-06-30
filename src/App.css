@@ -177,6 +177,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 auto;
+  height: 100%;
 }
 
 .button-exit {
@@ -340,21 +341,21 @@ body {
     left: 36%;
     top: 51%;
     width: 4.5%;
-    height: 20%;
+    height: 17%;
   }
 
   .apartament-2 {
     left: 51%;
     top: 51%;
     width: 5%;
-    height: 23%;
+    height: 19%;
   }
 
   .apartament-3 {
     left: 61%;
     top: 51%;
     width: 4%;
-    height: 20%;
+    height: 17%;
     background-color: transparent;
   }
 
@@ -362,7 +363,7 @@ body {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 18%;
+    height: 13%;
     background-color: transparent;
   }
 }
@@ -383,21 +384,21 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 21%;
+    height: 17%;
   }
 
   .apartament-2 {
     left: 51%;
     top: 51%;
     width: 5%;
-    height: 23%;
+    height: 19%;
   }
 
   .apartament-3 {
     left: 60.5%;
     top: 51%;
     width: 5%;
-    height: 20%;
+    height: 18%;
     background-color: transparent;
   }
 
@@ -405,7 +406,7 @@ body {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 18%;
+    height: 13%;
     background-color: transparent;
   }
 
@@ -430,28 +431,28 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 20%;
+    height: 17%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5%;
-    height: 23%;
+    height: 19%;
   }
 
   .apartament-3 {
     left: 60.2%;
     top: 51%;
     width: 5%;
-    height: 20%;
+    height: 17%;
   }
 
   .apartament-4 {
     left: 65.3%;
     top: 51%;
     width: 5%;
-    height: 16%;
+    height: 13%;
   }
 
 
@@ -477,28 +478,28 @@ body {
     left: 35.5%;
     top: 51%;
     width: 5%;
-    height: 21%;
+    height: 15%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5%;
-    height: 23%;
+    height: 17%;
   }
 
   .apartament-3 {
     left: 60.5%;
     top: 51%;
     width: 5%;
-    height: 21%;
+    height: 15%;
   }
 
   .apartament-4 {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 16%;
+    height: 11.5%;
   }
 }
 
@@ -524,28 +525,28 @@ body {
     left: 36%;
     top: 51%;
     width: 5%;
-    height: 21%;
+    height: 14%;
   }
 
   .apartament-2 {
     left: 50.5%;
     top: 51%;
     width: 5% 33.975px;
-    height: 23%;
+    height: 16%;
   }
 
   .apartament-3 {
     left: 61%;
     top: 51%;
     width: 4%;
-    height: 20%;
+    height: 14%;
   }
 
   .apartament-4 {
     left: 66%;
     top: 51%;
     width: 4%;
-    height: 16%;
+    height: 11%;
   }
 
 }
